@@ -1,0 +1,205 @@
+/* ================================
+   RESET
+================================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "OpenSans", system-ui, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* ================================
+   FONTS
+================================== */
+@font-face {
+  font-family: "OpenSans";
+  src: url("/src/assets/fonts/open-sans-v44-latin-regular.woff2")
+      format("woff2"),
+    url("/src/assets/fonts/open-sans-v44-latin-regular.woff") format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair";
+  src: url("/src/assets/fonts/playfair-display-v40-latin-regular.woff2")
+      format("woff2"),
+    url("/src/assets/fonts/playfair-display-v40-latin-regular.woff")
+      format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ================================
+   VARIABLES
+================================== */
+:root {
+  /* COLORS */
+  --bg-color: #f8f5f2;
+  --primary: #5c3d2e;
+  --secondary: #c7a17a;
+  --text-color: #333;
+
+  /* Fonts */
+  --font-primary: "Playfair", serif;
+  --font-secondary: "OpenSans", sans-serif;
+}
+
+/* ================================
+   TYPE SCALE
+================================== */
+h1 {
+  font-family: var(--font-primary);
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+h2 {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+h3 {
+  font-family: var(--font-primary);
+  font-size: clamp(1.25rem, 2.4vw, 1.5rem);
+}
+p {
+  font-size: 1rem;
+  font-family: var(--font-secondary);
+  line-height: 1.6;
+}
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin-block: 0 0.5rem;
+}
+p {
+  margin-block: 0 1rem;
+}
+p + p {
+  margin-top: 0.75rem;
+}
+
+/* ================================
+   CONTAINER
+================================== */
+.container {
+  width: min(95%, 1200px);
+  padding: 1.25rem;
+  margin-inline: auto;
+}
+
+/* ================================
+   Header
+================================== */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: clamp(0.75rem, 1.5vw, 1.5rem);
+  padding-inline: clamp(1rem, 4vw, 2rem);
+
+  width: min(95%, 1200px);
+  margin-inline: auto;
+}
+.header-container .startseite {
+  font-size: clamp(0.6rem, 3vw, 2.5rem);
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+}
+.nav-container ul {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  list-style: none;
+}
+.nav-container li + li {
+  border-left: 1px solid var(--text-color);
+  margin-left: 0.75rem;
+  padding-left: 0.75rem;
+}
+.nav-container ul li {
+  display: flex;
+  align-items: center;
+}
+.nav-container ul li a {
+  text-decoration: none;
+  color: inherit;
+  font-size: clamp(0.6rem, 2.5vw, 1.5rem);
+}
+.nav-container ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   MAIN CONTAINER
+================================== */
+.main-container .hero-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("/src/assets/images/picture/Kaffeebohnen.png"), center / cover no-repeat;
+  width: min(95%, 1200px);
+  margin-inline: auto;
+  min-height: 300px;
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  place-items: center;
+  color: var(--secondary);
+  text-align: center;
+}
+.main-container .hero-container h1,
+p,
+.btn {
+  margin-top: 1rem;
+}
+.main-container .hero-container .btn {
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--secondary);
+}
+.main-container .hero-container .btn:hover {
+  cursor: pointer;
+  background-color: var(--primary);
+  color: white;
+}
+
+/* ================================
+   ABOUT - US - SECTION
+================================== */
+.about-us-container {
+  margin-top: 1rem;
+}
+.about-us-container .about-us-text {
+  width: min(95%, 1200px);
+  margin-inline: auto;
+}
+
+.picture-container .about-us-picture img {
+  width: min(95%, 1200px);
+  margin-left: 9.381px;
+  height: 30vh;
+}
+/* ================================
+   MEDIA QUERIES
+================================== */
+@media (min-width: 768px) {
+  .header-container {
+    padding: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .header-container {
+    padding: 2rem;
+  }
+}
