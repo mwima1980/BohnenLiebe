@@ -22,18 +22,19 @@ body {
 ================================== */
 @font-face {
   font-family: "OpenSans";
-  src: url("/src/assets/fonts/open-sans-v44-latin-regular.woff2")
+  src: url("/BohnenLiebe/src/assets/fonts/open-sans-v44-latin-regular.woff2")
       format("woff2"),
-    url("/src/assets/fonts/open-sans-v44-latin-regular.woff") format("woff");
+    url("/BohnenLiebe/src/assets/fonts/open-sans-v44-latin-regular.woff")
+      format("woff");
   font-display: swap;
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Playfair";
-  src: url("/src/assets/fonts/playfair-display-v40-latin-regular.woff2")
+  src: url("/BohnenLiebe/src/assets/fonts/playfair-display-v40-latin-regular.woff2")
       format("woff2"),
-    url("/src/assets/fonts/playfair-display-v40-latin-regular.woff")
+    url("/BohnenLiebe/src/assets/fonts/playfair-display-v40-latin-regular.woff")
       format("woff");
   font-display: swap;
   font-weight: 400;
@@ -146,7 +147,8 @@ p + p {
 ================================== */
 .main-container .hero-container {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("/src/assets/images/picture/Kaffeebohnen.png"), center / cover no-repeat;
+    url("/BohnenLiebe/src/assets/images/picture/Kaffeebohnen.png"),
+    center / cover no-repeat;
   width: min(95%, 1200px);
   margin-inline: auto;
   min-height: 300px;
@@ -188,8 +190,9 @@ p,
 .picture-container .about-us-picture img {
   width: min(95%, 1200px);
   margin-left: 9.381px;
-  height: 30vh;
+  height: 35vh;
 }
+
 /* ================================
    MEDIA QUERIES
 ================================== */
@@ -197,9 +200,26 @@ p,
   .header-container {
     padding: 1rem;
   }
+  .picture-container .about-us-picture img {
+    margin-left: 19.2px;
+    height: 40vh;
+  }
 }
 @media (min-width: 1024px) {
   .header-container {
     padding: 2rem;
+  }
+  .about-us-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5rem;
+  }
+  .picture-container .about-us-picture img {
+    height: 30vh;
+  }
+}
+@media (min-width: 1200px) {
+  .picture-container .about-us-picture img {
+    height: 45vh;
   }
 }
