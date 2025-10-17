@@ -73,7 +73,7 @@ h3 {
   font-size: clamp(1.25rem, 2.4vw, 1.5rem);
 }
 p {
-  font-size: 1rem;
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
   font-family: var(--font-secondary);
   line-height: 1.6;
 }
@@ -180,7 +180,7 @@ p,
    ABOUT - US - SECTION
 ================================== */
 .about-us-container {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 .about-us-container .about-us-text {
   width: min(95%, 1200px);
@@ -194,6 +194,26 @@ p,
 }
 
 /* ================================
+   PRODUCT SECTION
+================================== */
+.product-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+.product-container h2 {
+  margin-bottom: 2rem;
+}
+.product-card {
+  display: grid;
+  gap: 2rem;
+  width: min(95%, 1200px);
+  margin-inline: auto;
+}
+.product-card picture img {
+  width: 30px;
+  width: 30px;
+}
+/* ================================
    MEDIA QUERIES
 ================================== */
 @media (min-width: 768px) {
@@ -203,6 +223,10 @@ p,
   .picture-container .about-us-picture img {
     margin-left: 19.2px;
     height: 40vh;
+  }
+  .product-card picture img {
+    width: 50px;
+    width: 50px;
   }
 }
 @media (min-width: 1024px) {
@@ -215,11 +239,9 @@ p,
     padding: 5rem;
   }
   .picture-container .about-us-picture img {
-    height: 30vh;
+    height: 50vh;
   }
-}
-@media (min-width: 1200px) {
-  .picture-container .about-us-picture img {
-    height: 45vh;
+  .product-card {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
